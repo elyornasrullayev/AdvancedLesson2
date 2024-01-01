@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:autoStart="true"
+        android:inAnimation="@anim/flip_in_animation"
+        android:outAnimation="@anim/flip_out_animation"
+        android:flipInterval="2500"
+
+        >
+        <ImageView
+            android:id="@+id/imageView1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_cat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_bear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_bigcat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/imageView4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_panda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </ViewFlipper>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:text="stop"/>
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:text="start"/>
+
+    </LinearLayout>
+
+</LinearLayout>
